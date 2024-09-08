@@ -378,8 +378,8 @@
         <!-- Blog End -->
 
         <!-- Team Start -->
-        <div id="TEAM" class="container-fluid team pb-5 {{ trans('app.txt') }}" dir="{{ trans('app.dir') }}">
-            <div class="container pb-5">
+        <!--div id="TEAM" class="container-fluid team pb-5 {{ trans('app.txt') }}" dir="{{ trans('app.dir') }}">
+            <div-- class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">{{ trans('app.team') }}</h4>
                 </div>
@@ -387,8 +387,8 @@
                     @foreach ($teams as $team)
                     <div class="col-md-12 col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-item">
-                            <div class="team-img">
-                                <img src="/public/teamImages/{{ $team->photo }}" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-img" align="center">
+                                <img src="/teamImages/{{ $team->photo }}" class="img-fluid rounded-top" alt="">
                                 <div class="team-icon">
                                     <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="javascript:;"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="javascript:;"><i class="fab fa-twitter"></i></a>
@@ -404,8 +404,8 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
-        </div>
+            </div-->
+        </!--div>
         <!-- Team End -->
 
 

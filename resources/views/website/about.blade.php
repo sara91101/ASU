@@ -256,7 +256,7 @@
                     <div class="col-md-12 col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="/web/img/help.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <img src="/servicesImages/{{ $service->image }}" class="img-fluid rounded-top w-100" alt="">
                                 <div class="service-icon p-3">
                                     <i class="fab fa-servicestack"></i>
                                 </div>
@@ -288,8 +288,8 @@
                     @foreach ($teams as $team)
                     <div class="col-md-12 col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="team-item">
-                            <div class="team-img">
-                                <img src="/public/teamImages/{{ $team->photo }}" class="img-fluid rounded-top w-100" alt="">
+                            <div class="team-img" align="center">
+                                <img src="/teamImages/{{ $team->photo }}" class="img-fluid rounded-top" alt="">
                                 <div class="team-icon">
                                     <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="javascript:;"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-primary btn-sm-square rounded-pill mb-2" href="javascript:;"><i class="fab fa-twitter"></i></a>

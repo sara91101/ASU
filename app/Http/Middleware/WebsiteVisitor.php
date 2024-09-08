@@ -21,7 +21,8 @@ class WebsiteVisitor
         // echo  is_null($request->server('HTTP_REFERER'))."<br>".$request->server('HTTP_REFERER');
         // $previous_url = $_SERVER['HTTP_REFERER'];
         // if(!str_contains(url()->previous(),"https://asu.org.sd") || is_null($request->server('HTTP_REFERER')))
-        if (is_null($request->server('HTTP_REFERER'))) {
+        if (is_null($request->server('HTTP_REFERER')))
+        {
             $route = Route::getFacadeRoot()->current()->uri();
             $visitor = new Visitor();
 

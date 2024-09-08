@@ -189,6 +189,12 @@
         border: 1px solid var(--bs-primary);
         color: var(--bs-primary);
     }
+
+    .navbar.navbar-expand-lg .navbar-language {
+        padding: 8px 15px;
+        border: 1px solid var(--bs-dark);
+        color: var(--bs-dark);
+    }
 }
 
 .navbar .dropdown-toggle::after {

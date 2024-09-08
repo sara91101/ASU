@@ -304,6 +304,10 @@
                         <span class="fa fa-bars"></span>
                     </button>
 
+                    <a href="/change/{{  trans('app.lg') }}" class="navbar-toggler" type="button">
+                        <span class="fas fa-globe-europe"></span>
+                    </a>
+
                     <a href="/" class="navbar-brand p-0">
                         <img src="/web/img/asu_logo.jpeg" alt="Logo" width="85" height="50">
                     </a>
@@ -335,16 +339,16 @@
                                 </div>
                             </div>
                             <a href="/contact" class="nav-item nav-link @if($url == 'contact')active @endif">{{ trans('app.contact') }}</a>
+                            <div class="nav-item px-3 justify-content-between" style="position: relative;display: flex;flex: none;flex-direction: row; justify-content: space-between;">
+                                @if(is_null(Auth::guard('university')->user()))
+                                    <a href="/universityLogin" class="btn btn-primary py-2 px-4 ms-3 flex-shrink-0" align="{{ trans('app.align') }}"> {{ trans('app.login') }}</a>
+                                @else
+                                    <a href="/universityProfile" class="btn btn-primary py-2 px-4 ms-3 flex-shrink-0" align="{{ trans('app.align') }}"> {{ trans('app.profile') }}</a>
+                                @endif
 
-                            @if(is_null(Auth::guard('university')->user()))
-                            <a href="/universityLogin" class="btn btn-primary rounded-pill  flex-shrink-0"> {{ trans('app.login') }}</a>
-                        @else
-                            <a href="/universityProfile" class="btn btn-primary rounded-pill flex-shrink-0"> {{ trans('app.profile') }}</a>
-                        @endif
-                        &nbsp;&nbsp;
-                        <button class="nav-item nav-link btn-search btn btn-primary btn-md-square rounded-circle py-2 px-4 ms-3 flex-shrink-0 text-white" data-bs-toggle="modal" data-bs-target="#searchModal">
-                            <i class="fas fa-search"></i>
-                        </button>
+                                <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal" align="{{ trans('app.arrow') }}"><i class="fas fa-search"></i></button>
+
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -472,11 +476,16 @@
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-12 text-center">
-                        <span class="text-center" dir="{{ trans('app.dir') }}">
+                        <span class="text-center text-white" dir="{{ trans('app.dir') }}">
                             <i class="fas fa-copyright text-light me-2"></i>
                                 {{ trans("app.title") }}
                             ,{{ trans("app.footer") }}
                         </span>
+                        <br>
+                        <a class="text-center text-white" href="https://wa.me/+201554624885" target="blank">
+                            <img src="/images/sarah_logo.jpeg" width="35" height="35">
+                            Created By Sarah Mokhtar
+                        </a>
                     </div>
                 </div>
             </div>
